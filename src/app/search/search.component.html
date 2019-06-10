@@ -4,3 +4,9 @@
       <input type="text" class="form-control" placeholder="Search git Users with username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
   </div>
 </form>
+<div *ngIf="profile">
+  <div class="panel panel-heading">
+    {{profile.name}}<small>{{ profile.login }}</small>
+    <span *ngIf="profile.company">, Hustle Details{{ profile.company }}</span>
+    {{profile.location }}
+  </div>
