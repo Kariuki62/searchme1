@@ -6,6 +6,9 @@ import {SearchService} from '../search.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  profile: any;
+  repos: any;
+  username = 'Kariuki62';
 
   constructor() { }
 
