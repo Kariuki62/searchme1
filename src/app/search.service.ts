@@ -25,7 +25,9 @@ export class SearchService {
     .map(res => res.json());
   }
 
-
+  updateProfile(username:String){
+    this.username= username;
+  }
 
 
 }

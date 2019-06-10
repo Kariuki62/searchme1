@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SearchService} from '../search.service';
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -13,7 +14,7 @@ export class SearchComponent implements OnInit {
   constructor(private searchService: SearchService) {
    }
 
-  this.profileService.updateProfile(this.username);
+  this.searchService.updateProfile(this.username);
   this.searchService.getUserInfo().subscribe(profile => {
     console.log(profile);
     this.profile = profile;
@@ -24,7 +25,7 @@ export class SearchComponent implements OnInit {
   });
 
   ngOnInit() {
-    
+
   }
 
 }
