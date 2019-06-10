@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit {
 
   constructor(private searchService: SearchService) {
    }
-
+  findProfile() {
   this.searchService.updateProfile(this.username);
   this.searchService.getUserInfo().subscribe(profile => {
     console.log(profile);
@@ -23,9 +23,10 @@ export class SearchComponent implements OnInit {
     console.log(repos);
     this.repos = repos;
   });
+}
 
   ngOnInit() {
-
+    this.findProfile();
   }
 
 }
