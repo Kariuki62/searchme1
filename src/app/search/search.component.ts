@@ -10,10 +10,21 @@ export class SearchComponent implements OnInit {
   repos: any;
   username = 'Kariuki62';
 
-  constructor(private searchService: SearchService) { }
+  constructor(private searchService: SearchService) {
+   }
 
+  this.profileService.updateProfile(this.username);
+  this.searchService.getUserInfo().subscribe(profile => {
+    console.log(profile);
+    this.profile = profile;
+  });
+  this.searchService.getReposInfo().subscribe(repos => {
+    console.log(repos);
+    this.repos = repos;
+  });
 
   ngOnInit() {
+    
   }
 
 }
