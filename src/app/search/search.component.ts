@@ -10,7 +10,8 @@ export class SearchComponent implements OnInit {
   repos: any;
   username = 'Kariuki62';
 
-  constructor() { }
+  constructor(private searchService: SearchService) { }
+
 
   ngOnInit() {
   }
